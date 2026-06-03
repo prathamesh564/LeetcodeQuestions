@@ -12,14 +12,14 @@ class Solution {
     }
 public:
     bool validPalindrome(string s) {
-        int left=0;
-        int right=s.length()-1;
-        while(left<right){
-            if(left < right && s[left]!= s[right] ){
-                return isPalindrome(s,left+1,right)|| isPalindrome(s, left, right - 1);
+        int lef=0;
+        int righ=s.length()-1;
+        while(lef<righ){
+            if(lef < righ && s[lef]!= s[righ] ){
+                return isPalindrome(s,lef+1,righ)|| isPalindrome(s, lef, righ - 1);
             }
-            left++;
-            right--;
+            lef++;
+            righ--;
         }
         return true;
     }
