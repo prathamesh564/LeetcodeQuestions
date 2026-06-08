@@ -5,5 +5,5 @@ class Solution:
             if cur.val == cur.next.val:
                 cur.next = cur.next.next
             else:
-                cur = cur.next
+                cur  = cur.next
         return head
