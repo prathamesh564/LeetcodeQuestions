@@ -3,7 +3,7 @@ class Solution:
         cur = head
         while cur and cur.next:
             if cur.val == current.next.val:
-                curent.next = current.next.next
+                cur.next = current.next.next
             else:
-                current = current.next
+                cur = current.next
         return head
