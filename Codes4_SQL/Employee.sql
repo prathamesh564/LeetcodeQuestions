@@ -10,7 +10,7 @@ INSERT INTO Employee (id, name, salary, managerId) VALUES
 (2, 'Henry', 80000, 4),
 (3, 'Sam', 60000, NULL),
 (4, 'Max', 90000, NULL);
-
+//Leetcode Solution
 select e.name as Employee
 from Employee e
 join Employee m
