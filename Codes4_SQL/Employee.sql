@@ -3,7 +3,8 @@ CREATE TABLE Employee (
     name VARCHAR(255) NOT NULL,
     salary INT NOT NULL,
     managerId INT,
-)
+    FOREIGN KEY (managerId) REFERENCES Employee(id)
+);
 select e.name as Employee
 from Employee e
 join Employee m
