@@ -5,6 +5,9 @@ CREATE TABLE Employee (
     managerId INT,
     FOREIGN KEY (managerId) REFERENCES Employee(id)
 );
+INSERT INTO Employee (id, name, salary, managerId) VALUES
+(1, 'Joe', 70000, 3),
+
 select e.name as Employee
 from Employee e
 join Employee m
