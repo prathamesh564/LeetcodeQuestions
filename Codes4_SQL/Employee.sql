@@ -7,6 +7,7 @@ CREATE TABLE Employee (
 );
 INSERT INTO Employee (id, name, salary, managerId) VALUES
 (1, 'Joe', 70000, 3),
+(2, 'Henry', 80000, 4),
 
 select e.name as Employee
 from Employee e
