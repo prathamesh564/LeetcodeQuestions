@@ -1,11 +1,11 @@
 class Solution:
     def exist(self, board: list[list[str]], word: str) -> bool:
-        ROWS, COLS = len(board), len(board[0])
+        ROW, COL = len(board), len(board[0])
         def dfs(r, c, index):
             if index == len(word):
                 return True
             if (r < 0 or c < 0 or 
-                r >= ROWS or c >= COLS or 
+                r >= ROW or c >= COL or 
                 board[r][c] != word[index]):
                 return False
             temp = board[r][c]
@@ -18,8 +18,8 @@ class Solution:
             board[r][c] = temp
             return found
 
-        for r in range(ROWS):
-            for c in range(COLS):
+        for r in range(ROW):
+            for c in range(COL):
                 if board[r][c] == word[0] and dfs(r, c, 0):
                     return True
                         
