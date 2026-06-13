@@ -1,11 +1,11 @@
 class Solution:
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         res=[]
-        def traverse(node):
+        def trav(node):
             if not node:
                 return
-            traverse(node.left)
-            traverse(node.right)
+            trav(node.left)
+            trav(node.right)
             res.append(node.val)
-        traverse(root)
+        trav(root)
         return res        
