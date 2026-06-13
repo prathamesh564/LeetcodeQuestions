@@ -1,11 +1,11 @@
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         res=[]
-        def traverse(node):
+        def trav(node):
             if not node:
                 return
-            traverse(node.left)
+            trav(node.left)
             res.append(node.val)
-            traverse(node.right)
-        traverse(root)
+            trav(node.right)
+        trav(root)
         return res        
