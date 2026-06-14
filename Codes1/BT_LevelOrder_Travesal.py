@@ -1,11 +1,9 @@
-from collections import deque
-
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         if not root:
             return []
         
-        result = []
+        res = []
         queue = deque([root])
         
         while queue:
@@ -20,6 +18,6 @@ class Solution:
                 if node.right:
                     queue.append(node.right)
             
-            result.append(current_level)
+            res.append(current_level)
             
-        return result
+        return res
